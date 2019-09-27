@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-   
     <header class="bg-light">
     <div class="container-fluid">
         <div class="row">
