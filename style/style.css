@@ -1,0 +1,19 @@
+.bg-my {
+  background: #faaf40;
+}
+header * {
+  color: #fff;
+}
+.link {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 15pt;
+}
+.link:hover {
+  background: #fff;
+  color: #faaf40;
+  text-decoration: none;
+}
+.title {
+  margin-left: 10rem;
+}
