@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <?php
         $title = "Fruit Phones";
+        $user = [
+            "name"  => "José Ramos",
+            "email" => "nettorammos@hotmail.com",
+        ];
     ?>
 <html lang="pt-br">
 <head>
@@ -17,10 +21,16 @@
     <header class="bg-light navbar">
             <h1 class="h5 me-3"><?php echo $title ?></h1>
             <nav>
-                <ul class="nav">
+                <ul class="nav"> 
+                <?php 
+                if(isset($user) && $user != []){                
+                ?>
                 <li class="nav-item p-3"><a href="" class="link-item text-dark">Cursos</a></li>
+                <li class="nav-item p-3"><a href="" class="link-item text-dark">Olá <?php echo $user["name"];?></a></li>
+                <?php }else {?>
                 <li class="nav-item p-3"><a href="" class="link-item text-dark">Login</a></li>
                 <li class="nav-item p-3"><a href="" class="link-item text-dark">Cadastro</a></li>
+                <?php }?> 
                 </ul>
             </nav>
 </header>
