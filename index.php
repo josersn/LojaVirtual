@@ -14,13 +14,8 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header class="bg-light">
-    <div class="container-fluid">
-        <div class="row">
-        <div class="col-md-6 col-lg-6 p-3  ">
-            <h1 class="h5"><?php echo $title ?></h1>
-        </div>
-        <div class="col-md-6 col-lg-6 d-flex justify-content-end">
+    <header class="bg-light navbar">
+            <h1 class="h5 me-3"><?php echo $title ?></h1>
             <nav>
                 <ul class="nav">
                 <li class="nav-item p-3"><a href="" class="link-item text-dark">Cursos</a></li>
@@ -28,10 +23,41 @@
                 <li class="nav-item p-3"><a href="" class="link-item text-dark">Cadastro</a></li>
                 </ul>
             </nav>
-        </div>
-        </div>
-    </div>
 </header>
+    <main>
+    <section class="container mt-4">
+        <div class="row justify-content-around">
+            <div class="col-lg-3 card col-md-3 d-flex justify-content-flex text-center">
+                <div class="card-body">
+                <div class="card-title text-center font-weight-bold">Iphone 11</div>
+                <img src="img/iphone_xr.jpg"  class="img-fluid" alt="">
+                <div class="card-text text-center mt-2 font-weight-bold"> R$ 4.300</div>
+                <a href="#" class="btn btn-primary mt-3 me-5">Comprar</a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 card col-md-3 d-flex justify-content-flex text-center">
+                <div class="card-body">
+                <div class="card-title text-center font-weight-bold">Iphone 11</div>
+                <img src="img/iphone_xr.jpg"  class="img-fluid" alt="">
+                <div class="card-text text-center mt-2 font-weight-bold"> R$ 4.300</div>
+                <a href="#" class="btn btn-primary mt-3 me-5">Comprar</a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 card col-md-3 d-flex justify-content-flex text-center">
+                <div class="card-body">
+                <div class="card-title text-center font-weight-bold">Iphone 11</div>
+                <img src="img/iphone_xr.jpg"  class="img-fluid" alt="">
+                <div class="card-text text-center mt-2 font-weight-bold"> R$ 4.300</div>
+                <a href="#" class="btn btn-primary mt-3 me-5">Comprar</a>
+                </div>
+            </div>
+
+          
+        </div>
+    </section>
+    </main>
 
 </body>
 </html>
