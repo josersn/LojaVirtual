@@ -8,6 +8,10 @@ header * {
   
   color: #fff;
 }
+.banner * {
+  height: 90vh;
+}
+
 .link {
   display: block;
   padding: 0.5rem 1rem;
