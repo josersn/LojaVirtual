@@ -1,7 +1,11 @@
 .bg-my {
   background: #faaf40;
 }
+header{
+  height: 10vh;
+}
 header * {
+  
   color: #fff;
 }
 .link {
