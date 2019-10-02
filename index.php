@@ -11,6 +11,11 @@
             ["nome" => "Iphone 8 Plus", "price" => 3300],
             ["nome" => "Iphone 7  Plus", "price" => 2600],
         ];
+        $categorias = [
+            "Celulares",
+            "Acessorios",
+            "Assistencia tecnica",
+        ]
     ?>
 <html lang="pt-br">
 <head>
@@ -40,10 +45,29 @@
                 </ul>
             </nav>
 </header>
+<div class="row justify-content-center bg-primary   ">
+             <nav>
+                 <ul class="nav">
+                    <?php if(isset($categorias) && $categorias != []) {?>
+                        <?php for( $i = 0; $i < count($categorias); $i++) { ?>
+                            <li class="nav-item">
+                                <a href="#" class="link-item p-4 text-white">
+                                    <?php echo $categorias[$i] ?>
+                                </a>
+                            </li>
+                        <?php } ?>
+                    <?php } else { ?>
+                        <h3 class="h3 text-center">
+                            Não há categorias
+                        </h3>
+                    <?php } ?>
+                </ul>
+             </nav>
+</div>
     <main>
     <section class="container mt-4">
         <div class="row justify-content-around">
-
+        <?php if(isset($produtos) && $produtos != []) { ?>
         <?php foreach($produtos as $produto ) { ?>
             <div class="col-lg-3 card col-md-3 d-flex justify-content-flex text-center">
                 <div class="card-body">
@@ -54,9 +78,14 @@
                 </div>
             </div>
         <?php } ?>
+        <?php } else { ?>
+            <h5 class="h1 text-danger">Não há produtos :( </h5>
+        <?php } ?>
         </div>
     </section>
     </main>
 
 </body>
+
+ 
 </html>
