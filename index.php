@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <?php
+
         $title = "Fruit Phones";
         $user = [
             "name"  => "José Ramos",
             "email" => "nettorammos@hotmail.com",
+        ];
+        $produtos = [
+            ["nome" => "Iphone 8", "price" => 3000],
+            ["nome" => "Iphone 8 Plus", "price" => 3300],
+            ["nome" => "Iphone 7  Plus", "price" => 2600],
         ];
     ?>
 <html lang="pt-br">
@@ -19,7 +25,7 @@
 </head>
 <body>
     <header class="bg-light navbar">
-            <h1 class="h5 me-3"><?php echo $title ?></h1>
+            <h1 class="h5 text-dark"><?php echo $title ?></h1>
             <nav>
                 <ul class="nav"> 
                 <?php 
@@ -37,34 +43,17 @@
     <main>
     <section class="container mt-4">
         <div class="row justify-content-around">
+
+        <?php foreach($produtos as $produto ) { ?>
             <div class="col-lg-3 card col-md-3 d-flex justify-content-flex text-center">
                 <div class="card-body">
-                <div class="card-title text-center font-weight-bold">Iphone 11</div>
+                <div class="card-title text-center font-weight-bold"><?php  echo $produto["nome"] ?></div>
                 <img src="img/iphone_xr.jpg"  class="img-fluid" alt="">
-                <div class="card-text text-center mt-2 font-weight-bold"> R$ 4.300</div>
+                <div class="card-text text-center mt-2 font-weight-bold"> R$ <?php  echo $produto["price"] ?> Reais</div>
                 <a href="#" class="btn btn-primary mt-3 me-5">Comprar</a>
                 </div>
             </div>
-
-            <div class="col-lg-3 card col-md-3 d-flex justify-content-flex text-center">
-                <div class="card-body">
-                <div class="card-title text-center font-weight-bold">Iphone 11</div>
-                <img src="img/iphone_xr.jpg"  class="img-fluid" alt="">
-                <div class="card-text text-center mt-2 font-weight-bold"> R$ 4.300</div>
-                <a href="#" class="btn btn-primary mt-3 me-5">Comprar</a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 card col-md-3 d-flex justify-content-flex text-center">
-                <div class="card-body">
-                <div class="card-title text-center font-weight-bold">Iphone 11</div>
-                <img src="img/iphone_xr.jpg"  class="img-fluid" alt="">
-                <div class="card-text text-center mt-2 font-weight-bold"> R$ 4.300</div>
-                <a href="#" class="btn btn-primary mt-3 me-5">Comprar</a>
-                </div>
-            </div>
-
-          
+        <?php } ?>
         </div>
     </section>
     </main>
