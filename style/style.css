@@ -1,5 +1,8 @@
+body{
+  overflow-x: hidden;
+}
 .bg-my {
-  background: #faaf40;
+  background: #000000;
 }
 header{
   height: 10vh;
@@ -8,8 +11,10 @@ header * {
   
   color: #fff;
 }
-.banner * {
-  height: 90vh;
+.banner  {
+  height: 50vh;
+  background: #060808 url('../img/iphone-png.png') no-repeat;
+  background-position-x: -120px;
 }
 
 .link {
@@ -19,9 +24,58 @@ header * {
 }
 .link:hover {
   background: #fff;
-  color: #faaf40;
+  color: #000000;
   text-decoration: none;
 }
 .title {
   margin-left: 10rem;
+}
+.ab-txt{
+  position: absolute;
+  left: 680px;
+  top: 130px;
+  color: #fff;
+}
+.ab-txt > h2 > span {
+  color: red;
+  font-size: 26pt;
+}
+.ab-txt > a{
+  padding: 0.5rem 2.5rem;
+  color: #fff;
+  background: red;
+  font-size: 16pt;
+} 
+.friday {
+  height: 30vh;
+  background: #060808 url('../img/black.png')no-repeat;
+  background-size: 30%;
+  background-position-y: -20px;
+
+}
+.friday > h2 {
+  position: absolute;
+  left: 350px;
+  top: 430px;
+}
+.friday > form{
+  position: absolute;
+  left: 350px;
+  top: 480px;
+}
+.friday > form > input {
+  width: 220px ;
+  padding: 5px 16px;
+
+}
+
+.friday > form > button {
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 7px 16px;
+  font-size: 13pt;
+}
+.friday > form > button:hover{
+  text-decoration: underline;
 }

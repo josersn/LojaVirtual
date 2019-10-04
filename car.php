@@ -6,15 +6,11 @@
             "name"  => "José Ramos",
             "email" => "nettorammos@hotmail.com",
         ];
-        $produtos = [
-            ["nome" => "Iphone XR", "price" => 4000, "img" => "img/iphone_xr.jpg"],
-            ["nome" => "Iphone X", "price" => 3300, "img" => "img/iphone_xr.jpg"],
-            ["nome" => "Iphone 7 ", "price" => 2600, "img" => "img/iphone-7.jpg"],
-        ];
+      
         $categorias = [
             "Celulares",
             "Acessorios",
-            "Assistencia tecnica",
+            "Assistencia Técnica",
         ]
     ?>
 <html lang="pt-br">
@@ -65,24 +61,7 @@
              </nav>
 </div>
     <main>
-    <section class="container mt-4">
-        <div class="row justify-content-around">
-        <?php if(isset($produtos) && $produtos != []) { ?>
-        <?php foreach($produtos as $produto ) { ?>
-            <div class="col-lg-3 card col-md-3 d-flex justify-content-flex text-center">
-                <div class="card-body">
-                <div class="card-title text-center font-weight-bold"><?php  echo $produto["nome"] ?></div>
-                <img src= "<?php echo $produto["img"] ?>"   class="img-fluid" alt="">
-                <div class="card-text text-center mt-2 font-weight-bold"> R$ <?php  echo $produto["price"] ?> Reais</div>
-                <a href="#" class="btn btn-primary mt-3 me-5">Comprar</a>
-                </div>
-            </div>
-        <?php } ?>
-        <?php } else { ?>
-            <h5 class="h1 text-danger">Não há produtos :( </h5>
-        <?php } ?>
-        </div>
-    </section>
+        <section></section>
     </main>
 
 </body>
