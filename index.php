@@ -74,7 +74,7 @@
                 <div class="card-title text-center font-weight-bold"><?php  echo $produto["nome"] ?></div>
                 <img src= "<?php echo $produto["img"] ?>"   class="img-fluid" alt="">
                 <div class="card-text text-center mt-2 font-weight-bold"> R$ <?php  echo $produto["price"] ?> Reais</div>
-                <a href="#" class="btn btn-primary mt-3 me-5">Comprar</a>
+                <a href="car.php?nomeProduto=<?php echo $produto["nome"] ?> " class="btn btn-primary mt-3 me-5">Comprar</a>
                 </div>
             </div>
         <?php } ?>

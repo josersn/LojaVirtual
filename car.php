@@ -61,10 +61,30 @@
              </nav>
 </div>
     <main>
-        <section></section>
+        <section class="container mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="h3">Carrinho de compras</h1>
+                </div>
+                <div class="col-12">
+                    <div class="row card ">
+                        <div class="col-12">
+                            <h2 class="h3">Você está comprando  <?php echo $_GET["nomeProduto"] ?></h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <form method="post" action="sucess.php" class="d-flex flex-column p-3">
+                                <input type="text" name="nome_completo" placeholder="Insira Nome Completo"/>
+                                <input type="text" name="cpf" placeholder="Insira CPF"/>
+                                <input type="number" name="cartao" placeholder="Insira Cartão"/>
+                                <input type="date" name="validade_cartao" placeholder="MM/AAAA"/>
+                                <input type="number" name="codigo_cartao" placeholder="Insira código de cartao"/>
+                                <button type="submit" class="btn btn-success">Finalizar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
 </body>
-
- 
 </html>
