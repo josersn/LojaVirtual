@@ -11,8 +11,24 @@
 <body>
 <?php
 include("header.php");
-// $nome = $_POST["nome_completo"];
-// echo "Parábens ". $nome ." compra com sucesso";
+include("config/validacoes.php");
+
+
+
+$nome = $_POST["nome_completo"];
+$cpf = $_POST["cpf"];
+$cartao = $_POST["cartao"];
+
+validation_nome($nome);
+validation_cpf($cpf);
+
+if(count($erros)==0){
+    echo "Parabéns ". $nome ." compra com sucesso";
+}else {
+    foreach($erros as $erro){
+        echo "<h2>$erro</h2>";
+    }
+}
 ?>
 </body>
 </html>

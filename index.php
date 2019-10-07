@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include("config/variaveis.php") ?>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">

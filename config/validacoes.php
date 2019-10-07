@@ -1,11 +1,19 @@
 <?php  
 $erros = [];
-    function validation($area){
+    function validation_nome($nome){
         global $erros;
-        if( strlen($area) == 0 ){
+        if( strlen($nome) == 0 ){
             array_push($erros, "Preencha o nome corretamente");
         }
     }
+    function validation_cpf($cpf){
+        global $erros;
+        if(strlen($cpf) != 11){
+            array_push($erros, "Preencha o CPF corretamente");
+        }
+    }
+
+    $teste = 123456789;
 
     // cpf = 11
     // cartao = 16
