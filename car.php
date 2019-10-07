@@ -1,18 +1,5 @@
 <!DOCTYPE html>
-<?php
-
-        $title = "Fruit Phones";
-        $user = [
-            "name"  => "José Ramos",
-            "email" => "nettorammos@hotmail.com",
-        ];
-      
-        $categorias = [
-            "Celulares",
-            "Acessorios",
-            "Assistencia Técnica",
-        ]
-    ?>
+<?php require('config/variaveis.php')?>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -25,22 +12,7 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header class="bg-light navbar">
-            <h1 class="h5 text-dark"><?php echo $title ?></h1>
-            <nav>
-                <ul class="nav"> 
-                <?php 
-                if(isset($user) && $user != []){                
-                ?>
-                <li class="nav-item p-3"><a href="" class="link-item text-dark">Cursos</a></li>
-                <li class="nav-item p-3"><a href="" class="link-item text-dark">Olá <?php echo $user["name"];?></a></li>
-                <?php }else {?>
-                <li class="nav-item p-3"><a href="" class="link-item text-dark">Login</a></li>
-                <li class="nav-item p-3"><a href="" class="link-item text-dark">Cadastro</a></li>
-                <?php }?> 
-                </ul>
-            </nav>
-</header>
+   <?php require("header.php"); ?>
 <div class="row justify-content-center bg-primary   ">
              <nav>
                  <ul class="nav">
