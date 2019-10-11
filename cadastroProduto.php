@@ -1,6 +1,26 @@
 <?php 
    include("config/variaveis.php");
-    
+   function cadastroProduto ($nome, $descricao, $img, $price) {
+       $nomeArquivo = "produtos.json";
+       
+       if(file_exists($nomeArquivo)){
+
+       }else{
+           $produtos = [];
+        //    array_push()
+        $produtos[] = [
+            "nome" => $nome,
+            "descricao"=> $descricao,
+            "img"=> $img,
+            "price"=> $price,
+
+        ];
+       }
+       var_dump($produtos);
+   }
+   if($_POST){
+    cadastroProduto($_POST["nome"], $_POST["descricao"], $_POST["img"], $_POST["price"]);
+   };
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +73,7 @@
          <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome do Produto">
      </div>
      <div class="form-group">
-         <label for="categoria">Nome:</label>
+         <label for="categoria">Categorias:</label>
          <select class="form-control" id="categoria">
             <?php
                 foreach($categorias as $categoria) {

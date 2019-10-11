@@ -11,7 +11,14 @@
             "Assistencia Técnica",
         ];
         $produtos = [
-            ["nome" => "Iphone XR", "price" => 4000, "img" => "img/iphone_xr.jpg", "quantidade" => 5, "descricao"=> "none", "categoria" => "Celulares"],
+            [
+            "nome" => "Iphone XR",
+            "price" => 4000, "img" =>
+            "img/iphone_xr.jpg",
+            "quantidade" => 5,
+            "descricao"=> "none",
+            "categoria" => "Celulares"
+                ],
             ["nome" => "Iphone X", "price" => 3300, "img" => "img/iphone_xr.jpg", "quantidade" => 5,"descricao"=> "none", "categoria" => "Celulares"],
             ["nome" => "Iphone 7 ", "price" => 2600, "img" => "img/iphone-7.jpg", "quantidade" => 5,"descricao"=> "none", "categoria" => "Celulares"],
         ];
