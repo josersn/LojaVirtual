@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <?php require "header.php" ?>
+    <?php include("header.php")  ?>
 <div class="row justify-content-center bg-primary   ">
              <nav>
                  <ul class="nav">

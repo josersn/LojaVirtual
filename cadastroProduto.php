@@ -4,22 +4,43 @@
        $nomeArquivo = "produtos.json";
        
        if(file_exists($nomeArquivo)){
+           //essa função devolve um objeto, adicionando true ele devolve um array.
+           $produtos = json_decode(file_get_contents($nomeArquivo), true);
+           $produtos[] = [
+                "nome" => $nome,
+                "descricao"=> $descricao,
+                "img"=> $img,
+                "price"=> $price,
+            ];
+            $certo = file_put_contents($nomeArquivo, json_encode($produtos));
+            if($certo){
+                return "Produto Cadastrado";
+            }else{
+                return "Produto não Cadastrado";
+            }
+            var_dump( $produtos);
 
        }else{
            $produtos = [];
-        //    array_push()
+        //    array_push() mais custoso do que a ção abaixo;
         $produtos[] = [
             "nome" => $nome,
             "descricao"=> $descricao,
             "img"=> $img,
             "price"=> $price,
-
         ];
+        $json = json_encode($produtos);
+        // FILE_APPEND 
+        $certo = file_put_contents($nomeArquivo, $json);
+        if($certo){
+            return "Produto Cadastrado";
+        }else{
+            return "Produto não Cadastrado";
+        }
        }
-       var_dump($produtos);
    }
    if($_POST){
-    cadastroProduto($_POST["nome"], $_POST["descricao"], $_POST["img"], $_POST["price"]);
+    echo  cadastroProduto($_POST["nome"], $_POST["descricao"], $_POST["img"], $_POST["price"]);
    };
 ?>
 
