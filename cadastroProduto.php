@@ -47,7 +47,7 @@
 
     $nomeImgType = $_FILES["img"]["type"];
     $nomeImgError = $_FILES["img"]["error"];
-    echo cadastroProduto($_POST["nome"], $_POST["descricao"], $_POST["img"], $_POST["price"]);
+    echo cadastroProduto($_POST["nome"], $_POST["descricao"], $nomeImgPath, $_POST["price"]);
    };
    
 ?>
