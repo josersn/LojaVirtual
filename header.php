@@ -1,4 +1,4 @@
-<?php require_once('config/variaveis.php') ?>
+<?php require_once('variaveis.php') ?>
 <header class="bg-light navbar">
             <h1 class="h5 text-dark">
             <a href="index.php" class="text-dark text-decoration-none">

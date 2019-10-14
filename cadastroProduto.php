@@ -1,5 +1,5 @@
 <?php 
-   include("config/variaveis.php");
+   include("variaveis.php");
    function cadastroProduto ($nome, $descricao, $img, $price) {
        $nomeArquivo = "produtos.json";
        
@@ -14,15 +14,13 @@
             ];
             $certo = file_put_contents($nomeArquivo, json_encode($produtos));
             if($certo){
-                return "Produto Cadastrado";
+                return "<h2 class='h3 text-center'>Produto Cadastrado</h2>";
             }else{
                 return "Produto não Cadastrado";
             }
-            var_dump( $produtos);
-
        }else{
            $produtos = [];
-        //    array_push() mais custoso do que a ção abaixo;
+        //    array_push() mais custoso do que ação abaixo;
         $produtos[] = [
             "nome" => $nome,
             "descricao"=> $descricao,
@@ -40,8 +38,18 @@
        }
    }
    if($_POST){
-    echo  cadastroProduto($_POST["nome"], $_POST["descricao"], $_POST["img"], $_POST["price"]);
+    $nomeImg = $_FILES["img"]["name"];
+    $nomeImgTmp = $_FILES["img"]["tmp_name"];
+    $nomeImgPath = "img/". $nomeImg;
+    $certo = move_uploaded_file($nomeImgTmp, $nomeImgPath);
+    var_dump($certo);
+    exit;
+
+    $nomeImgType = $_FILES["img"]["type"];
+    $nomeImgError = $_FILES["img"]["error"];
+    echo cadastroProduto($_POST["nome"], $_POST["descricao"], $_POST["img"], $_POST["price"]);
    };
+   
 ?>
 
 <!DOCTYPE html>
@@ -88,7 +96,7 @@
  </div>
  <div class="col-md-4 col-lg-4">
      <h2 class="h3">Cadastrar Produto</h2>
-     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
      <div class="form-group">
          <label for="nome">Nome:</label>
          <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome do Produto">
