@@ -11,9 +11,9 @@
                 if(isset($user) && $user != []){                
                 ?>
                 <li class="nav-item p-3"><a href="" class="link-item text-dark">Cursos</a></li>
-                <li class="nav-item p-3"><a href="" class="link-item text-dark">Olá <?php echo $user["name"];?></a></li>
+                <li class="nav-item p-3"><a href="" class="link-item text-dark">Olá <?php echo $user;?></a></li>
                 <?php }else {?>
-                <li class="nav-item p-3"><a href="" class="link-item text-dark">Login</a></li>
+                <li class="nav-item p-3"><a href="login.php" class="link-item text-dark">Login</a></li>
                 <li class="nav-item p-3"><a href="" class="link-item text-dark">Cadastro</a></li>
                 <?php }?> 
                 </ul>
