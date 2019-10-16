@@ -42,11 +42,7 @@
     $nomeImgTmp = $_FILES["img"]["tmp_name"];
     $nomeImgPath = "img/". $nomeImg;
     $certo = move_uploaded_file($nomeImgTmp, $nomeImgPath);
-    var_dump($certo);
-    exit;
 
-    $nomeImgType = $_FILES["img"]["type"];
-    $nomeImgError = $_FILES["img"]["error"];
     echo cadastroProduto($_POST["nome"], $_POST["descricao"], $nomeImgPath, $_POST["price"]);
    };
    
@@ -85,9 +81,9 @@
         foreach($produtos as $produto){ ?>
     <tr>
         <td> <?php   echo $produto["nome"];?> </td>
-        <td> <?php   echo $produto["categoria"];?> </td>
+        <td> <?php   echo $produto["descricao"];?> </td>
         <td> <?php   echo $produto["price"];?> </td>
-        </tr>
+    </tr>
            <?php
         }
       ?> 
