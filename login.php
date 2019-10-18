@@ -1,6 +1,5 @@
 <?php
-require_once("variaveis.php");
-$usuario = ["email" => "nettorammos@hotmail.com", "senha" => '$2y$10$TZ.o9dPnSCFApJ/DqfwTweojSEeFEa0xBYhH.tEkO4F4OnFUuLUSi', 'user' => "José Ramos"];
+require_once("config/variaveis.php");
 $erros = [];
 if($_POST){
     $email = $_POST["email"];
@@ -11,7 +10,7 @@ if($_POST){
         if(password_verify($senha, $usuario["senha"])){
             session_start();
             $_SESSION["logado"] = true;
-            $_SESSION["usuario"] = ["nome" => "José Ramos"];
+            $_SESSION["nome"] = "José Ramos";
             header('Location: index.php');
         }else{
             $erros = ["Senha Errada"];

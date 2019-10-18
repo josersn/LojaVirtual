@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<?php include("variaveis.php") ?>
+<?php require_once('config/variaveis.php') ;
+?>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -23,6 +24,7 @@
                                     <?php echo $categorias[$i] ?>
                                 </a>
                             </li>
+                            
                         <?php } ?>
                     <?php } else { ?>
                         <h3 class="h3 text-center">

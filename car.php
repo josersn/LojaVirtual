@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php require('variaveis.php')?>
+<?php require('config/variaveis.php')?>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">

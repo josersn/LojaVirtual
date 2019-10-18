@@ -1,5 +1,5 @@
 <?php 
-   include("variaveis.php");
+   include("config/variaveis.php");
    function cadastroProduto ($nome, $descricao, $img, $price) {
        $nomeArquivo = "produtos.json";
        
